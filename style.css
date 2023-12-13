@@ -38,16 +38,12 @@ body {
     margin-top: 0.875rem;
 }
 
-.menu__link:hover {
+.menu__item:hover .menu__link{
     color: #000000;
 }
 
-.side-menu__item:hover {
-    background-color: #d60107;
-}
-
-.side-menu__link:hover {
-    color: #ffffff;
+a:hover {
+    cursor: pointer;
 }
 
 /* HEADER */
@@ -154,11 +150,22 @@ header,
 .hero {
     overflow-x: scroll;
     display: flex;
+    gap:0.5rem;
+}
+.hero-banner {
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
 }
 
 .hero::-webkit-scrollbar {
-    display: none;
+    height: 5px;
+    background-color: #141414;
 }
+
+.hero::-webkit-scrollbar-thumb {
+    background: #d60107;
+  }
 
 .hero {
     -ms-overflow-style: none;
@@ -301,6 +308,16 @@ header,
     align-self: stretch;
     position: relative;
     padding: 1rem;
+    position: relative;
+}
+
+.see-all-btn a,
+.news-card a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
 }
 
 .see-all-btn p {
@@ -308,6 +325,9 @@ header,
     font-size: 0.875rem;
     /*14px*/
     font-weight: 500;
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none;
 }
 
 /* CLIENTS */
@@ -321,7 +341,6 @@ header,
     position: relative;
 }
 
-
 @-webkit-keyframes scroll {
     0% {
         -webkit-transform: translateX(0);
@@ -329,8 +348,8 @@ header,
     }
 
     100% {
-        -webkit-transform: translateX(calc(-170px * 6));
-        transform: translateX(calc(-170px * 6));
+        -webkit-transform: translateX(calc(-170px * 12));
+        transform: translateX(calc(-170px * 12));
     }
 }
 
@@ -341,17 +360,17 @@ header,
     }
 
     100% {
-        -webkit-transform: translateX(calc(-170px * 6));
-        transform: translateX(calc(-170px * 6));
+        -webkit-transform: translateX(calc(-170px * 12));
+        transform: translateX(calc(-170px * 12));
     }
 }
 
 .clients_slider-track {
-    -webkit-animation: scroll 40s linear infinite;
-    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 60s linear infinite;
+    animation: scroll 60s linear infinite;
     display: flex;
     align-items: center;
-    width: calc(170px * 12);
+    width: calc(170px * 24);
 }
 
 .clients__slide {
@@ -419,6 +438,22 @@ header,
     font-size: 0.875rem;
     color: #d60107;
 }
+
+@media (hover: hover) {
+    .side-menu__item:hover .side-menu__link {
+        color:#FFFFFF
+    }
+
+    .side-menu__item:hover:not(:first-child) {
+        background-color: #d60107;
+    }
+
+    .side-menu__item:hover:first-child {
+        border-top-right-radius: 25px;
+        background-color: #d60107;
+    }
+}
+
 
 @media (min-width: 1600px) {
 
