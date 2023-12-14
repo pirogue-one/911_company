@@ -15,7 +15,9 @@ closeBtn.addEventListener('click', () => {
 })
 
 
-//mouse move
+//////////////mouse move
+
+//first slider
 
 let mouseDown = false;
 let startX, scrollLeft;
@@ -39,8 +41,38 @@ const move = (e) => {
     slider.scrollLeft = scrollLeft - scroll;
 }
 
-// Add the event listeners
 slider.addEventListener('mousemove', move, false);
 slider.addEventListener('mousedown', startDragging, false);
 slider.addEventListener('mouseup', stopDragging, false);
 slider.addEventListener('mouseleave', stopDragging, false);
+
+
+
+//second slider
+
+let mouseDownTwo = false;
+let startXTwo, scrollLeftTwo;
+const sliderTwo = document.querySelector('.news');
+
+const startDraggingTwo = (e) => {
+    mouseDownTwo = true;
+    startXTwo = e.pageX - sliderTwo.offsetLeft;
+    scrollLeftTwo = sliderTwo.scrollLeft;
+}
+
+const stopDraggingTwo = (e) => {
+    mouseDownTwo = false;
+}
+
+const moveTwo = (e) => {
+    e.preventDefault();
+    if (!mouseDownTwo) { return; }
+    const x = e.pageX - sliderTwo.offsetLeft;
+    const scroll = x - startXTwo;
+    sliderTwo.scrollLeft = scrollLeftTwo - scroll;
+}
+
+sliderTwo.addEventListener('mousemove', moveTwo, false);
+sliderTwo.addEventListener('mousedown', startDraggingTwo, false);
+sliderTwo.addEventListener('mouseup', stopDraggingTwo, false);
+sliderTwo.addEventListener('mouseleave', stopDraggingTwo, false);

@@ -218,6 +218,15 @@ header,
 
 /* NEWS */
 
+.news::-webkit-scrollbar {
+    height: 5px;
+    background-color: #141414;
+}
+
+.news::-webkit-scrollbar-thumb {
+    background: #d60107;
+}
+
 .news,
 .see-all-btn {
     display: flex;
@@ -226,10 +235,6 @@ header,
 .news {
     gap: 0.5rem;
     overflow-x: scroll;
-}
-
-.news::-webkit-scrollbar {
-    display: none;
 }
 
 .news {
