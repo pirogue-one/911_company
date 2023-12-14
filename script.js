@@ -1,3 +1,20 @@
+'use strict'
+
+// modal window 
+
+const closeBtn = document.querySelector('#close-btn');
+const modalMenu = document.querySelector('#main-modal_menu__wrapper');
+const mobMenu = document.querySelector('#burger-menu');
+
+mobMenu.addEventListener('click', () => {
+    modalMenu.style.display = 'flex';
+});
+
+closeBtn.addEventListener('click', () => {
+    modalMenu.style.display = 'none';
+})
+
+
 //mouse move
 
 let mouseDown = false;
