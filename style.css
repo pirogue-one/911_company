@@ -522,6 +522,10 @@ header,
         background-color: #d60107;
     }
 
+    .menu__item-last {
+        padding-bottom: 2rem;
+    }
+
     .header-hero-container {
         flex-direction: column;
     }
