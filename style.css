@@ -290,8 +290,7 @@ header,
     position: relative;
 }
 
-.see-all-btn a,
-.news-card a {
+.see-all-btn a {
     position: absolute;
     top: 0;
     left: 0;
