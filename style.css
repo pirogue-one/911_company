@@ -51,6 +51,7 @@ a:hover {
 .burger-menu {
     display: none;
     width: 25px;
+    cursor: pointer;
 }
 
 .burger-menu span {
@@ -67,6 +68,7 @@ a:hover {
 
 #close-btn {
     display: none;
+    cursor: pointer;
 }
 
 header,
